@@ -22,6 +22,7 @@ const TodosReducer = (state = initialState, action) => {
           { task: action.message, id: action.id },
         ],
       };
+  
     default:
       return state;
   }

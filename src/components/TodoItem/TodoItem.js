@@ -28,11 +28,14 @@ const TodoItem = ({ task }) => {
       <>
       <div className="TodoItem_Container">
         <div>
-        {task.task}
+          <h4>
+          {task.task}
+          </h4>
+        
         </div>
         <div className="Todo_buttons">
-        <Button onClick={() => setIsUpdate(true)} variant="secondary" >Edit</Button> &nbsp;
-        <Button onClick={() => dispatch(deleteTodo(task.id))} variant="secondary">Delete</Button>
+        <Button onClick={() => setIsUpdate(true)} variant="primary" >Edit</Button> &nbsp;
+        <Button onClick={() => dispatch(deleteTodo(task.id))} variant="danger">Delete</Button>
         </div>
         </div>
       </>

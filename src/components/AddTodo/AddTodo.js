@@ -25,7 +25,7 @@ const AddTodo = () => {
         name='userInput'
         onChange={(e) => handleInputChange(e)}
       />&nbsp;
-      <Button type='submit' variant="secondary" className="todo-button" >Add</Button>
+      <Button type='submit' variant="info" className="todo-button" >Add</Button>
     </form>
   );
 };

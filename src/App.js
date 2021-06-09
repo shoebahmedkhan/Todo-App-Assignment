@@ -1,3 +1,4 @@
+import React ,{useState,useEffect} from "react"
 import AddTodo from "./components/AddTodo/AddTodo";
 import TodoList from "./components/TodoList/TodoList";
 import { useSelector } from "react-redux";
@@ -13,7 +14,7 @@ function App() {
       <div className="todo-container">
         <Card className="card__details"  >
         <AddTodo />
-        <Searchbar/>
+       <Searchbar/>
         <TodoList />
         </Card>
       
