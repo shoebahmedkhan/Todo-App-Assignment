@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import {Button} from "react-bootstrap"
 import { addTodo } from "../../actions";
 import cuid from "cuid";
+import "./AddTodo.css";
 
 const AddTodo = () => {
   const [tasks, setTasks] = useState("");
@@ -18,12 +20,12 @@ const AddTodo = () => {
   }
   return (
     <form onSubmit={handleFormSubmit}>
-      <input
+      <input className="todo-input"
         type='text'
         name='userInput'
         onChange={(e) => handleInputChange(e)}
-      />
-      <button type='submit'>Add</button>
+      />&nbsp;
+      <Button type='submit' variant="secondary" className="todo-button" >Add</Button>
     </form>
   );
 };

@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
+import {Button} from "react-bootstrap";
 import { deleteTodo, updateTodo } from "../../actions";
+import "./TodoItem.css";
 
 const TodoItem = ({ task }) => {
   const [isUpdate, setIsUpdate] = useState(false);
@@ -24,9 +26,15 @@ const TodoItem = ({ task }) => {
   const renderItem = () => {
     return (
       <>
+      <div className="TodoItem_Container">
+        <div>
         {task.task}
-        <button onClick={() => setIsUpdate(true)}>Edit</button>
-        <button onClick={() => dispatch(deleteTodo(task.id))}>Delete</button>
+        </div>
+        <div className="Todo_buttons">
+        <Button onClick={() => setIsUpdate(true)} variant="secondary" >Edit</Button> &nbsp;
+        <Button onClick={() => dispatch(deleteTodo(task.id))} variant="secondary">Delete</Button>
+        </div>
+        </div>
       </>
     );
   };

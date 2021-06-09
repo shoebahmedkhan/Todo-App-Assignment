@@ -21,9 +21,12 @@ code {
   text-align: center;
 }
 .card__details{
-  width: 25rem;
+  width: 50rem;
   margin: auto;
-  height: 70vh;
-  
-  background-color: gray;
+  height: 80vh;
+}
+.card{
+
+  background-color: rgb(212, 126, 126) !important;
+
 }
